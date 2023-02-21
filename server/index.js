@@ -1,18 +1,14 @@
-// simple put, express is a framework for node that helps us build rest API's
 import express from "express";
 import cors from "cors";
-
-// initialize the express app.
+// Initialize the express app
 const app = express();
-
 app.use(cors());
 app.use(express.json());
 
-// make some animals
+// Make some animals
 import Chance from "chance";
 const chance = new Chance();
 
-//Creates an array of 250 items.
 const animals = [...Array(250).keys()].map((id) => {
   return {
     id,
